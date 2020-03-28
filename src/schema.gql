@@ -2,6 +2,14 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+"""Author"""
+type Author {
+  id: ID!
+  firstName: String
+  lastName: String
+}
+
 type Query {
-  hello: String!
+  author(id: String!): Author!
+  authors: [Author!]!
 }
