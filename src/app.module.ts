@@ -5,6 +5,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { AuthorsModule } from './authors/authors.module';
+import { PostsModule } from './posts/posts.module';
 import {
   DB_CONNECTION_HOST,
   DB_CONNECTION_PORT,
@@ -31,6 +32,7 @@ import {
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
     AuthorsModule,
+    PostsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
